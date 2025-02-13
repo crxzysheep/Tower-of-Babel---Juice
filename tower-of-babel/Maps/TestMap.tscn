@@ -1,16 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0e17oyvtelm2"]
+[gd_scene load_steps=6 format=3 uid="uid://b0e17oyvtelm2"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_5p3di"]
+[ext_resource type="Script" path="res://SideViewplayer.gd" id="1_vqxe2"]
 [ext_resource type="Texture2D" uid="uid://brunbut35recw" path="res://icon.svg" id="2_htgki"]
 [ext_resource type="Script" path="res://Maps/camera_2d.gd" id="3_6a4m0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pos5n"]
 size = Vector2(128, 128)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7uecd"]
+distance = -151.0
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
-script = ExtResource("1_5p3di")
+script = ExtResource("1_vqxe2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 texture = ExtResource("2_htgki")
@@ -20,3 +23,17 @@ shape = SubResource("RectangleShape2D_pos5n")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("3_6a4m0")
+
+[node name="FLOOR" type="StaticBody2D" parent="."]
+position = Vector2(0, -18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FLOOR"]
+shape = SubResource("WorldBoundaryShape2D_7uecd")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FLOOR"]
+position = Vector2(473, 5)
+polygon = PackedVector2Array(-726, 151, -1154, 154, -731, 152, 543, -55, 398, 149, 211.249, 149.332)
+
+[node name="Sprite2D" type="Sprite2D" parent="FLOOR"]
+position = Vector2(155, 215)
+texture = ExtResource("2_htgki")
