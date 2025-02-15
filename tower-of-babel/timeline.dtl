@@ -1,4 +1,3 @@
-[style name="Test"]
 join Guardian leftmost
 Guardian: testing
-<Empty Text Event>
+Guardian: testing 2

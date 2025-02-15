@@ -11,8 +11,10 @@ distance = -151.0
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_vwy6g")]
+scale = Vector2(1.00364, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(1, 0.602622)
 script = ExtResource("3_6a4m0")
 
 [node name="FLOOR" type="StaticBody2D" parent="."]

@@ -1,0 +1,86 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=20 format=3 uid="uid://c4kj80ptydin8"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_hecml"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_6prb8"]
+[ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="3_2cke7"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="4_3b8j0"]
+[ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="5_owg05"]
+[ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="6_u66m5"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="7_ihoat"]
+[ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="8_ojcmc"]
+[ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="9_matcy"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_po80a"]
+
+[sub_resource type="Resource" id="Resource_wt7a1"]
+script = ExtResource("1_hecml")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_gmeey"]
+script = ExtResource("1_hecml")
+scene = ExtResource("2_6prb8")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_64ouv"]
+script = ExtResource("1_hecml")
+scene = ExtResource("3_2cke7")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_q3qmn"]
+script = ExtResource("1_hecml")
+scene = ExtResource("4_3b8j0")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_xf742"]
+script = ExtResource("1_hecml")
+scene = ExtResource("5_owg05")
+overrides = {
+"bold_font": "\"res://Babbel Mac.ttf\"",
+"bold_italics_font": "\"res://Babbel Mac.ttf\"",
+"italics_font": "\"res://Babbel Mac.ttf\"",
+"normal_font": "\"res://Babbel Mac.ttf\"",
+"text_size": "40.0",
+"text_use_global_size": "false"
+}
+
+[sub_resource type="Resource" id="Resource_nc7wq"]
+script = ExtResource("1_hecml")
+scene = ExtResource("6_u66m5")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_a3tn7"]
+script = ExtResource("1_hecml")
+scene = ExtResource("7_ihoat")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_c6miy"]
+script = ExtResource("1_hecml")
+scene = ExtResource("8_ojcmc")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_m0glw"]
+script = ExtResource("1_hecml")
+scene = ExtResource("9_matcy")
+overrides = {
+"font_custom_bold": "\"res://Babbel Mac.ttf\"",
+"font_custom_italics": "\"res://Babbel Mac.ttf\"",
+"font_custom_normal": "\"res://Babbel Mac.ttf\""
+}
+
+[resource]
+script = ExtResource("10_po80a")
+name = "New_File"
+layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16", "17"])
+layer_info = {
+"": SubResource("Resource_wt7a1"),
+"10": SubResource("Resource_gmeey"),
+"11": SubResource("Resource_64ouv"),
+"12": SubResource("Resource_q3qmn"),
+"13": SubResource("Resource_xf742"),
+"14": SubResource("Resource_nc7wq"),
+"15": SubResource("Resource_a3tn7"),
+"16": SubResource("Resource_c6miy"),
+"17": SubResource("Resource_m0glw")
+}
+base_overrides = {}
+layers = Array[ExtResource("1_hecml")]([])
+metadata/_latest_layer = "13"
