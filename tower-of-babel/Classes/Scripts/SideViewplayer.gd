@@ -22,3 +22,7 @@ func _physics_process(delta: float) -> void:
 	velocity.rotated(rotation)
 	
 	move_and_slide()
+
+
+func player():
+	pass

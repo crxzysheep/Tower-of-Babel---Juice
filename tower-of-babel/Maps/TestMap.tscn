@@ -1,25 +1,16 @@
 [gd_scene load_steps=6 format=3 uid="uid://b0e17oyvtelm2"]
 
-[ext_resource type="Script" path="res://SideViewplayer.gd" id="1_vqxe2"]
+[ext_resource type="PackedScene" uid="uid://dxtethswiqcsl" path="res://Classes/player.tscn" id="1_vwy6g"]
 [ext_resource type="Texture2D" uid="uid://brunbut35recw" path="res://icon.svg" id="2_htgki"]
 [ext_resource type="Script" path="res://Maps/camera_2d.gd" id="3_6a4m0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pos5n"]
-size = Vector2(128, 128)
+[ext_resource type="PackedScene" uid="uid://dbvj48gor0kpq" path="res://Classes/Gardian.tscn" id="4_ugvr6"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7uecd"]
 distance = -151.0
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Player" type="CharacterBody2D" parent="."]
-script = ExtResource("1_vqxe2")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture = ExtResource("2_htgki")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("RectangleShape2D_pos5n")
+[node name="Player" parent="." instance=ExtResource("1_vwy6g")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("3_6a4m0")
@@ -37,3 +28,6 @@ polygon = PackedVector2Array(-726, 151, -1154, 154, -731, 152, 543, -55, 398, 14
 [node name="Sprite2D" type="Sprite2D" parent="FLOOR"]
 position = Vector2(155, 215)
 texture = ExtResource("2_htgki")
+
+[node name="Gardian" parent="." instance=ExtResource("4_ugvr6")]
+position = Vector2(469, -37)
